@@ -27,7 +27,7 @@ bootstrap_app(){
 	cd "$PROJECT_DIR"
 	west update
 	west zephyr-export
-	pip3 install --user -r "$PROJECT_DIR/zephyr/scripts/requirements.txt"
+	pip3 install --user -r "zephyr/scripts/requirements.txt"
 }
 
 bootstrap_sdk(){
