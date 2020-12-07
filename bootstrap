@@ -55,7 +55,7 @@ case $key in
 	fi
 	bootstrap_system
 	bootstrap_sdk
-	bootstrap_app "${APP_PATH}"
+	bootstrap_init "${APP_PATH}"
     shift # past argument
     shift # past value
     ;;
@@ -75,7 +75,7 @@ case $key in
 		echo "Usage: --init <path>";
 		exit 1
 	fi
-	bootstrap_app "${APP_PATH}"
+	bootstrap_init "${APP_PATH}"
     shift # past argument
     shift # past value
     ;;
