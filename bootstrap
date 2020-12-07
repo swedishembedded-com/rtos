@@ -51,8 +51,7 @@ case $key in
 	if [ "$2" != "" ]; then
 		APP_PATH="$2"
 	else
-		echo "Usage: --all <path>";
-		exit 1
+		APP_PATH="."
 	fi
 	bootstrap_system
 	bootstrap_sdk
