@@ -21,7 +21,7 @@ bootstrap_system(){
 	source ~/.bashrc
 }
 
-bootstrap_app(){
+bootstrap_init(){
 	PROJECT_DIR=$1
 	west init "$PROJECT_DIR"
 	cd "$PROJECT_DIR"
@@ -54,12 +54,12 @@ case $key in
 	bootstrap_system
     shift # past argument
     ;;
-    --app)
+    --init)
 	export ZEPHYR_BASE=""
 	if [ "$2" != "" ]; then
 		APP_PATH="$2"
 	else
-		echo "Usage: --app <path>";
+		echo "Usage: --init <path>";
 		exit 1
 	fi
 	bootstrap_app "${APP_PATH}"
