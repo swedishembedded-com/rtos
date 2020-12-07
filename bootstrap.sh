@@ -50,7 +50,7 @@ case $key in
 	shift # past argument
 	bootstrap_sdk
     ;;
-    --system)
+    --sys|--system)
 	bootstrap_system
     shift # past argument
     ;;
