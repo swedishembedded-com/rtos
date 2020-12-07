@@ -46,6 +46,20 @@ do
 key="$1"
 
 case $key in
+	--all)
+	export ZEPHYR_BASE=""
+	if [ "$2" != "" ]; then
+		APP_PATH="$2"
+	else
+		echo "Usage: --all <path>";
+		exit 1
+	fi
+	bootstrap_system
+	bootstrap_sdk
+	bootstrap_app "${APP_PATH}"
+    shift # past argument
+    shift # past value
+    ;;
     --sdk)
 	shift # past argument
 	bootstrap_sdk
